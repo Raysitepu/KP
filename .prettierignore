@@ -1,9 +1,0 @@
-.next
-AGENTS.md
-node_modules
-.cache
-coverage
-package-lock.json
-src/data/sumut-regions.json
-supabase/migrations
-.env.example
