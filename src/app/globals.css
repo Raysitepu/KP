@@ -1,26 +1,181 @@
 @import "tailwindcss";
-
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
+  --app-navy: #15324b;
+  --app-blue: #2d6f9f;
+  --app-sky: #55a47a;
 }
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: #f3f6fa;
+  color: var(--app-navy);
+}
+button,
+input {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+button:focus-visible,
+input:focus-visible,
+summary:focus-visible {
+  outline: 3px solid #55a47a;
+  outline-offset: 2px;
+}
+.eyebrow {
+  margin-bottom: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #2d6f9f;
+}
+.section-title {
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+.landing-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, black, transparent 85%);
+}
+.landing-map {
+  background-image:
+    radial-gradient(
+      circle at 20% 30%,
+      rgba(145, 170, 150, 0.25),
+      transparent 22%
+    ),
+    radial-gradient(
+      circle at 78% 62%,
+      rgba(215, 131, 95, 0.16),
+      transparent 28%
+    ),
+    linear-gradient(rgba(216, 234, 220, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(216, 234, 220, 0.07) 1px, transparent 1px);
+  background-size:
+    auto,
+    auto,
+    32px 32px,
+    32px 32px;
+}
+.leaflet-container {
+  z-index: 0;
+  font-family: inherit;
+}
+.map-pin {
+  background: transparent;
+  border: 0;
+}
+.map-pin-dot {
+  display: block;
+  width: 28px;
+  height: 28px;
+  border: 4px solid white;
+  border-radius: 999px;
+  box-shadow: 0 4px 14px #0f172a55;
+}
+.map-pin-weather {
+  background: #557a64;
+}
+.map-pin-quake {
+  width: 32px;
+  height: 32px;
+  background: #dc2626;
+  animation: pulse 1.8s infinite;
+}
+.route-location-icon,
+.route-weather-icon {
+  border: 0;
+  background: transparent;
+}
+.route-location-pin {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border: 3px solid white;
+  border-radius: 999px 999px 999px 4px;
+  color: white;
+  font-weight: 900;
+  box-shadow: 0 5px 16px #0f172a66;
+}
+.route-location-pin.origin {
+  background: #16865a;
+}
+.route-location-pin.destination {
+  background: #dc2626;
+}
+.route-weather-pin {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  border: 3px solid white;
+  border-radius: 14px 14px 14px 4px;
+  color: white;
+  box-shadow: 0 5px 16px #0f172a66;
+  transform: rotate(-8deg);
+}
+.route-weather-pin b,
+.route-weather-pin i {
+  font-size: 12px;
+  font-style: normal;
+}
+.route-weather-pin.selected {
+  outline: 4px solid #0f172a55;
+}
+.route-weather-pin.normal,
+.route-legend-symbol.normal {
+  background: #16865a;
+}
+.route-weather-pin.rain,
+.route-legend-symbol.rain {
+  background: #1687c8;
+}
+.route-weather-pin.caution,
+.route-legend-symbol.caution {
+  background: #d97706;
+}
+.route-weather-pin.warning,
+.route-legend-symbol.warning {
+  background: #dc2626;
+}
+.route-weather-pin.unknown,
+.route-legend-symbol.unknown {
+  background: #64748b;
+}
+.route-legend-symbol {
+  display: inline-grid;
+  width: 22px;
+  height: 22px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 7px;
+  color: white;
+  font-weight: 900;
+}
+@keyframes pulse {
+  50% {
+    box-shadow: 0 0 0 10px #dc262633;
   }
 }
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+  }
 }

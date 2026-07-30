@@ -1,0 +1,684 @@
+[
+  {
+    "id": "search-01",
+    "category": "pencarian wilayah",
+    "question": "Bagaimana cara mencari wilayah?",
+    "keywords": [
+      "cari wilayah",
+      "mencari daerah",
+      "pilih daerah",
+      "pencarian lokasi"
+    ],
+    "answer": "Ketik nama desa, kelurahan, kecamatan, kabupaten, atau kota pada kolom pencarian. Pilih hasil agar data cuaca wilayah tersebut ditampilkan.",
+    "suggestions": [
+      "Apa itu kode adm4?",
+      "Mengapa wilayah saya tidak ditemukan?"
+    ]
+  },
+  {
+    "id": "search-02",
+    "category": "pencarian wilayah",
+    "question": "Wilayah apa saja yang dapat dicari?",
+    "keywords": ["wilayah tersedia", "daerah tersedia", "cakupan pencarian"],
+    "answer": "Pencarian mencakup desa dan kelurahan pada seluruh kabupaten/kota di Sumatera Utara dari dataset administrasi lokal."
+  },
+  {
+    "id": "search-03",
+    "category": "pencarian wilayah",
+    "question": "Mengapa wilayah saya tidak ditemukan?",
+    "keywords": [
+      "wilayah tidak ditemukan",
+      "daerah tidak ada",
+      "lokasi tidak ditemukan"
+    ],
+    "answer": "Pastikan wilayah berada di Sumatera Utara dan coba nama desa, kecamatan, atau kabupaten tanpa singkatan. Dataset lokal mungkin mengikuti nama administrasi resmi."
+  },
+  {
+    "id": "search-04",
+    "category": "pencarian wilayah",
+    "question": "Apakah saya harus memasukkan kode wilayah?",
+    "keywords": ["harus kode wilayah", "wajib adm4", "memasukkan kode"],
+    "answer": "Tidak. Sistem otomatis mengambil kode ADM4 setelah Anda memilih nama wilayah."
+  },
+  {
+    "id": "search-05",
+    "category": "pencarian wilayah",
+    "question": "Apa itu kode adm4?",
+    "keywords": ["arti adm4", "kode adm4", "administrasi tingkat empat"],
+    "answer": "ADM4 adalah kode administrasi tingkat desa atau kelurahan yang digunakan BMKG untuk menentukan lokasi prakiraan."
+  },
+  {
+    "id": "search-06",
+    "category": "pencarian wilayah",
+    "question": "Mengapa pencarian hanya tersedia untuk Sumatera Utara?",
+    "keywords": ["hanya sumatera utara", "batas pencarian sumut"],
+    "answer": "Aplikasi ini khusus untuk monitoring wilayah Sumatera Utara, sehingga dataset dan validasi kode dibatasi pada kode berawalan 12."
+  },
+  {
+    "id": "search-07",
+    "category": "pencarian wilayah",
+    "question": "Bagaimana cara mengganti wilayah?",
+    "keywords": ["ganti wilayah", "ubah lokasi", "pilih lokasi lain"],
+    "answer": "Buka kolom pencarian, ketik lokasi baru, lalu pilih salah satu hasil. Seluruh dashboard akan diperbarui."
+  },
+  {
+    "id": "search-08",
+    "category": "pencarian wilayah",
+    "question": "Bagaimana cara menghapus wilayah yang dipilih?",
+    "keywords": ["hapus wilayah", "hapus lokasi pilihan"],
+    "answer": "Wilayah aktif tidak dapat dikosongkan agar dashboard tetap memiliki konteks. Pilih wilayah lain untuk menggantinya; tombol silang hanya menghapus teks pencarian."
+  },
+  {
+    "id": "search-09",
+    "category": "pencarian wilayah",
+    "question": "Mengapa aplikasi membuka wilayah terakhir?",
+    "keywords": ["wilayah terakhir", "lokasi tersimpan", "membuka lokasi lama"],
+    "answer": "Wilayah terakhir disimpan hanya pada perangkat ini agar dapat digunakan kembali saat aplikasi dibuka."
+  },
+  {
+    "id": "search-10",
+    "category": "pencarian wilayah",
+    "question": "Apakah kode adm4 dapat dicari langsung?",
+    "keywords": ["cari kode adm4", "ketik adm4"],
+    "answer": "Ya. Kode ADM4 Sumatera Utara dapat diketik langsung pada kolom pencarian."
+  },
+
+  {
+    "id": "weather-01",
+    "category": "cuaca",
+    "question": "Dari mana data cuaca diperoleh?",
+    "keywords": ["sumber cuaca", "asal prakiraan cuaca"],
+    "answer": "Data prakiraan cuaca diperoleh dari API terbuka resmi BMKG dan dinormalisasi tanpa mengubah makna datanya."
+  },
+  {
+    "id": "weather-02",
+    "category": "cuaca",
+    "question": "Seberapa sering data cuaca diperbarui?",
+    "keywords": ["frekuensi pembaruan cuaca", "kapan cuaca diperbarui"],
+    "answer": "Aplikasi mengambil prakiraan terbaru BMKG dan menyimpannya sementara selama 30 menit untuk mengurangi permintaan berulang."
+  },
+  {
+    "id": "weather-03",
+    "category": "cuaca",
+    "question": "Apa arti suhu?",
+    "keywords": ["arti suhu", "pengertian temperatur"],
+    "answer": "Suhu menunjukkan tingkat panas atau dingin udara dan ditampilkan dalam derajat Celsius."
+  },
+  {
+    "id": "weather-04",
+    "category": "cuaca",
+    "question": "Apa arti kelembapan?",
+    "keywords": ["arti kelembapan", "kandungan uap air"],
+    "answer": "Kelembapan menunjukkan banyaknya kandungan uap air di udara dalam persentase. Nilai tinggi biasanya membuat udara terasa lebih lembap."
+  },
+  {
+    "id": "weather-05",
+    "category": "cuaca",
+    "question": "Apa arti kecepatan angin?",
+    "keywords": ["arti kecepatan angin", "laju angin"],
+    "answer": "Kecepatan angin menunjukkan seberapa cepat udara bergerak dalam satuan yang diberikan BMKG."
+  },
+  {
+    "id": "weather-06",
+    "category": "cuaca",
+    "question": "Apa arti arah angin?",
+    "keywords": ["arti arah angin", "angin dari mana"],
+    "answer": "Arah angin menunjukkan arah asal angin bertiup, bukan arah tujuan angin."
+  },
+  {
+    "id": "weather-07",
+    "category": "cuaca",
+    "question": "Apa arti jarak pandang?",
+    "keywords": ["arti jarak pandang", "pengertian visibilitas"],
+    "answer": "Jarak pandang adalah jarak maksimum objek masih dapat terlihat dengan jelas."
+  },
+  {
+    "id": "weather-08",
+    "category": "cuaca",
+    "question": "Apa arti tutupan awan?",
+    "keywords": ["arti tutupan awan", "persentase awan"],
+    "answer": "Tutupan awan menunjukkan perkiraan persentase langit yang tertutup awan."
+  },
+  {
+    "id": "weather-09",
+    "category": "cuaca",
+    "question": "Apa arti cuaca cerah berawan?",
+    "keywords": ["cerah berawan artinya", "kondisi cerah berawan"],
+    "answer": "Cerah berawan berarti langit cukup cerah namun masih terdapat awan pada sebagian area."
+  },
+  {
+    "id": "weather-10",
+    "category": "cuaca",
+    "question": "Mengapa prakiraan ditampilkan setiap tiga jam?",
+    "keywords": ["interval tiga jam", "prakiraan per tiga jam"],
+    "answer": "API BMKG menyediakan prakiraan dalam interval tiga jam agar perubahan kondisi sepanjang hari dapat terlihat."
+  },
+  {
+    "id": "weather-11",
+    "category": "cuaca",
+    "question": "Apakah prakiraan cuaca selalu tepat?",
+    "keywords": ["akurasi prakiraan", "prakiraan selalu tepat"],
+    "answer": "Prakiraan adalah hasil analisis dan dapat berubah. Gunakan pembaruan terbaru serta kanal resmi BMKG untuk keputusan penting."
+  },
+  {
+    "id": "weather-12",
+    "category": "cuaca",
+    "question": "Mengapa data cuaca belum tersedia?",
+    "keywords": ["cuaca belum tersedia", "prakiraan kosong"],
+    "answer": "Koneksi, layanan BMKG, batas permintaan, atau respons kosong dapat menyebabkan data belum tersedia. Coba lagi setelah beberapa saat."
+  },
+  {
+    "id": "weather-13",
+    "category": "dashboard",
+    "question": "Bagaimana cara memperbarui data?",
+    "keywords": ["perbarui data", "refresh dashboard", "muat ulang data"],
+    "answer": "Tekan tombol Perbarui data pada header. Tombol memiliki jeda singkat untuk mencegah permintaan berlebihan."
+  },
+  {
+    "id": "weather-14",
+    "category": "dashboard",
+    "question": "Apa arti waktu pembaruan terakhir?",
+    "keywords": ["arti pembaruan terakhir", "waktu update"],
+    "answer": "Waktu pembaruan terakhir menunjukkan kapan aplikasi terakhir berhasil mengambil data untuk wilayah aktif."
+  },
+  {
+    "id": "weather-15",
+    "category": "cuaca",
+    "question": "Mengapa ikon cuaca tidak muncul?",
+    "keywords": ["ikon cuaca hilang", "gambar cuaca tidak muncul"],
+    "answer": "Ikon dapat tidak tersedia pada respons sumber. Deskripsi cuaca tetap menjadi informasi utama dan tidak diganti dengan data buatan."
+  },
+
+  {
+    "id": "quake-01",
+    "category": "gempa",
+    "question": "Dari mana data gempa diperoleh?",
+    "keywords": ["sumber gempa", "asal data gempa"],
+    "answer": "Data gempa berasal dari feed resmi BMKG untuk gempa terbaru, M5+, dan gempa dirasakan."
+  },
+  {
+    "id": "quake-02",
+    "category": "gempa",
+    "question": "Apa arti magnitudo?",
+    "keywords": ["arti magnitudo", "energi gempa"],
+    "answer": "Magnitudo menunjukkan besarnya energi yang dilepaskan saat gempa. Semakin besar nilainya, semakin besar energinya."
+  },
+  {
+    "id": "quake-03",
+    "category": "gempa",
+    "question": "Apa arti kedalaman gempa?",
+    "keywords": ["arti kedalaman gempa", "sumber gempa dari permukaan"],
+    "answer": "Kedalaman menunjukkan jarak sumber gempa dari permukaan bumi. Gempa dangkal biasanya lebih mudah dirasakan di sekitar pusat gempa."
+  },
+  {
+    "id": "quake-04",
+    "category": "gempa",
+    "question": "Apa arti pusat gempa?",
+    "keywords": ["arti pusat gempa", "lokasi sumber gempa"],
+    "answer": "Pusat gempa adalah lokasi sumber pelepasan energi gempa; titik proyeksinya di permukaan disebut episenter."
+  },
+  {
+    "id": "quake-05",
+    "category": "gempa",
+    "question": "Apa arti episenter?",
+    "keywords": ["arti episenter", "pengertian episenter"],
+    "answer": "Episenter adalah titik di permukaan bumi tepat di atas sumber gempa."
+  },
+  {
+    "id": "quake-06",
+    "category": "gempa",
+    "question": "Apa arti gempa dirasakan?",
+    "keywords": ["gempa dirasakan artinya", "kategori dirasakan"],
+    "answer": "Gempa dirasakan adalah kejadian yang memiliki laporan tingkat guncangan yang dirasakan di satu atau lebih wilayah."
+  },
+  {
+    "id": "quake-07",
+    "category": "gempa",
+    "question": "Apa arti gempa M5+?",
+    "keywords": ["arti m5 plus", "gempa magnitude lima"],
+    "answer": "M5+ adalah daftar gempa dengan magnitudo 5,0 atau lebih yang disediakan BMKG."
+  },
+  {
+    "id": "quake-08",
+    "category": "gempa",
+    "question": "Apa arti potensi tsunami?",
+    "keywords": ["arti potensi tsunami", "status tsunami"],
+    "answer": "Status potensi tsunami ditampilkan berdasarkan keterangan BMKG dan tidak ditentukan sendiri oleh aplikasi."
+  },
+  {
+    "id": "quake-09",
+    "category": "gempa",
+    "question": "Apa arti tidak berpotensi tsunami?",
+    "keywords": ["tidak berpotensi tsunami artinya", "status tidak tsunami"],
+    "answer": "Berdasarkan informasi BMKG, gempa tersebut tidak dinyatakan berpotensi tsunami. Tetap ikuti pembaruan kanal resmi BMKG."
+  },
+  {
+    "id": "quake-10",
+    "category": "gempa",
+    "question": "Apa arti skala MMI?",
+    "keywords": ["arti skala mmi", "tingkat guncangan mmi"],
+    "answer": "MMI menggambarkan tingkat guncangan dan dampak gempa yang dirasakan pada suatu lokasi."
+  },
+  {
+    "id": "quake-11",
+    "category": "gempa",
+    "question": "Bagaimana melihat lokasi gempa di peta?",
+    "keywords": ["lihat gempa di peta", "lokasi episenter peta"],
+    "answer": "Pilih tombol Lihat di peta pada kartu gempa. Peta akan bergerak menuju episenter."
+  },
+  {
+    "id": "quake-12",
+    "category": "gempa",
+    "question": "Mengapa gempa di luar Sumatera Utara tetap muncul?",
+    "keywords": ["gempa luar sumut", "gempa daerah lain muncul"],
+    "answer": "Feed gempa BMKG berskala nasional. Aplikasi mempertahankan cakupan resmi tersebut agar informasi tidak dipotong secara menyesatkan."
+  },
+  {
+    "id": "quake-13",
+    "category": "gempa",
+    "question": "Apakah data gempa diperbarui secara otomatis?",
+    "keywords": ["pembaruan otomatis gempa", "refresh gempa"],
+    "answer": "Data disimpan sementara selama 30 menit dan dapat diperbarui manual. Aplikasi tidak melakukan polling terus-menerus."
+  },
+  {
+    "id": "quake-14",
+    "category": "gempa",
+    "question": "Apa perbedaan gempa terbaru dan gempa dirasakan?",
+    "keywords": ["beda terbaru dirasakan", "gempa terbaru vs dirasakan"],
+    "answer": "Gempa terbaru berisi kejadian paling baru, sedangkan tab Dirasakan berisi kejadian dengan laporan guncangan yang dirasakan."
+  },
+  {
+    "id": "quake-15",
+    "category": "gempa",
+    "question": "Apa yang harus dilakukan ketika terjadi gempa?",
+    "keywords": ["tindakan saat gempa", "ketika gempa harus apa"],
+    "answer": "Lindungi kepala, jauhi kaca dan benda yang dapat jatuh, lalu evakuasi setelah guncangan berhenti jika aman. Ikuti arahan BMKG dan pihak berwenang."
+  },
+
+  {
+    "id": "map-01",
+    "category": "WebGIS",
+    "question": "Apa itu WebGIS?",
+    "keywords": ["arti webgis", "sistem informasi geografis web"],
+    "answer": "WebGIS adalah sistem informasi geografis melalui website. Di sini peta menampilkan wilayah cuaca dan titik gempa."
+  },
+  {
+    "id": "map-02",
+    "category": "WebGIS",
+    "question": "Bagaimana cara menggunakan peta?",
+    "keywords": ["menggunakan peta", "panduan peta"],
+    "answer": "Geser peta untuk berpindah, gunakan tombol plus/minus atau gestur untuk zoom, dan pilih marker untuk melihat detail."
+  },
+  {
+    "id": "map-03",
+    "category": "WebGIS",
+    "question": "Bagaimana cara memperbesar peta?",
+    "keywords": ["perbesar peta", "zoom in peta"],
+    "answer": "Tekan tombol plus pada peta, gunakan roda mouse, atau lakukan gestur mencubit keluar pada perangkat sentuh."
+  },
+  {
+    "id": "map-04",
+    "category": "WebGIS",
+    "question": "Bagaimana cara memperkecil peta?",
+    "keywords": ["perkecil peta", "zoom out peta"],
+    "answer": "Tekan tombol minus, gunakan roda mouse, atau lakukan gestur mencubit ke dalam."
+  },
+  {
+    "id": "map-05",
+    "category": "WebGIS",
+    "question": "Apa arti marker cuaca?",
+    "keywords": ["marker cuaca", "tanda biru peta"],
+    "answer": "Marker biru menunjukkan posisi wilayah cuaca yang sedang aktif."
+  },
+  {
+    "id": "map-06",
+    "category": "WebGIS",
+    "question": "Apa arti marker gempa?",
+    "keywords": ["marker gempa", "tanda merah peta"],
+    "answer": "Marker merah menunjukkan episenter gempa yang dipilih dari daftar."
+  },
+  {
+    "id": "map-07",
+    "category": "WebGIS",
+    "question": "Bagaimana melihat detail marker?",
+    "keywords": ["detail marker", "buka popup peta"],
+    "answer": "Klik atau tekan marker untuk membuka popup informasi cuaca atau gempa."
+  },
+  {
+    "id": "map-08",
+    "category": "WebGIS",
+    "question": "Bagaimana mengaktifkan atau menonaktifkan layer?",
+    "keywords": ["ganti layer", "kontrol lapisan peta"],
+    "answer": "Gunakan kontrol layer di kanan atas peta untuk memilih peta jalan atau topografi."
+  },
+  {
+    "id": "map-09",
+    "category": "WebGIS",
+    "question": "Mengapa marker tidak muncul?",
+    "keywords": ["marker tidak muncul", "titik peta hilang"],
+    "answer": "Marker memerlukan koordinat valid dari sumber data. Coba muat ulang atau pilih wilayah/gempa lain."
+  },
+  {
+    "id": "map-10",
+    "category": "WebGIS",
+    "question": "Bagaimana mengembalikan posisi awal peta?",
+    "keywords": ["reset posisi peta", "kembali peta awal"],
+    "answer": "Pilih kembali wilayah aktif atau pilih wilayah lain agar peta dipusatkan ke lokasi cuaca tersebut."
+  },
+
+  {
+    "id": "warning-01",
+    "category": "peringatan dini",
+    "question": "Apa itu peringatan dini cuaca?",
+    "keywords": ["arti peringatan dini", "peringatan cuaca"],
+    "answer": "Peringatan dini adalah informasi resmi mengenai potensi cuaca signifikan agar masyarakat dapat meningkatkan kewaspadaan."
+  },
+  {
+    "id": "warning-02",
+    "category": "peringatan dini",
+    "question": "Dari mana informasi peringatan dini diperoleh?",
+    "keywords": ["sumber peringatan dini", "asal warning"],
+    "answer": "Informasi hanya akan ditampilkan jika tersedia dari sumber resmi, publik, dan stabil. Saat ini adapter belum memiliki sumber tersebut."
+  },
+  {
+    "id": "warning-03",
+    "category": "peringatan dini",
+    "question": "Apa arti status hijau?",
+    "keywords": ["arti status hijau", "peringatan hijau"],
+    "answer": "Hijau hanya boleh digunakan bila sumber resmi menyatakan tidak ada informasi peringatan aktif; aplikasi tidak menetapkannya sendiri."
+  },
+  {
+    "id": "warning-04",
+    "category": "peringatan dini",
+    "question": "Apa arti status kuning?",
+    "keywords": ["arti status kuning", "peringatan kuning"],
+    "answer": "Kuning merupakan label perhatian jika dinyatakan sumber resmi, bukan penilaian aplikasi."
+  },
+  {
+    "id": "warning-05",
+    "category": "peringatan dini",
+    "question": "Apa arti status oranye?",
+    "keywords": ["arti status oranye", "peringatan oranye"],
+    "answer": "Oranye merupakan label waspada hanya bila berasal dari sumber resmi."
+  },
+  {
+    "id": "warning-06",
+    "category": "peringatan dini",
+    "question": "Apa arti status merah?",
+    "keywords": ["arti status merah", "peringatan merah"],
+    "answer": "Merah menandai peringatan penting jika diberikan sumber resmi. Ikuti instruksi BMKG dan pihak berwenang."
+  },
+  {
+    "id": "warning-07",
+    "category": "peringatan dini",
+    "question": "Apa arti data belum tersedia?",
+    "keywords": ["data peringatan belum tersedia", "warning tidak tersedia"],
+    "answer": "Artinya aplikasi belum memperoleh informasi resmi. Ini tidak berarti kondisi aman."
+  },
+  {
+    "id": "warning-08",
+    "category": "peringatan dini",
+    "question": "Mengapa peringatan dini tidak muncul?",
+    "keywords": ["peringatan tidak muncul", "warning hilang"],
+    "answer": "Belum ada endpoint resmi, publik, terdokumentasi, dan stabil yang terhubung. Aplikasi tidak membuat atau melakukan scraping data."
+  },
+  {
+    "id": "warning-09",
+    "category": "peringatan dini",
+    "question": "Apakah aplikasi dapat menentukan tingkat bahaya?",
+    "keywords": ["menentukan bahaya", "aplikasi nilai bahaya"],
+    "answer": "Tidak. Aplikasi tidak menentukan tingkat bahaya sendiri dan hanya menyajikan informasi sumber resmi."
+  },
+  {
+    "id": "warning-10",
+    "category": "peringatan dini",
+    "question": "Di mana saya dapat melihat informasi resmi?",
+    "keywords": ["kanal resmi bmkg", "lihat informasi resmi"],
+    "answer": "Gunakan website, aplikasi InfoBMKG, dan kanal resmi BMKG serta arahan pemerintah setempat."
+  },
+
+  {
+    "id": "source-01",
+    "category": "sumber data",
+    "question": "Dari mana sumber data aplikasi?",
+    "keywords": ["sumber data aplikasi", "asal semua data"],
+    "answer": "Cuaca dan gempa berasal dari BMKG; pencarian wilayah berasal dari dataset administrasi lokal yang merujuk kode Kemendagri."
+  },
+  {
+    "id": "source-02",
+    "category": "sumber data",
+    "question": "Apakah aplikasi ini merupakan website resmi BMKG?",
+    "keywords": ["website resmi bmkg", "aplikasi resmi"],
+    "answer": "Tidak. Ini prototype penyajian kembali data resmi BMKG untuk pengembangan dan pembelajaran. Gunakan kanal BMKG untuk informasi resmi."
+  },
+  {
+    "id": "source-03",
+    "category": "sumber data",
+    "question": "Apakah aplikasi mengubah data BMKG?",
+    "keywords": ["mengubah data bmkg", "manipulasi data"],
+    "answer": "Aplikasi menormalisasi struktur dan format tampilan tanpa mengarang atau mengubah makna informasi BMKG."
+  },
+  {
+    "id": "source-04",
+    "category": "sumber data",
+    "question": "Apakah data dapat digunakan untuk keputusan keselamatan?",
+    "keywords": ["keputusan keselamatan", "acuan keselamatan"],
+    "answer": "Untuk keputusan keselamatan dan kebencanaan, selalu mengacu pada kanal resmi BMKG dan pihak berwenang."
+  },
+  {
+    "id": "source-05",
+    "category": "sumber data",
+    "question": "Apakah aplikasi menyimpan data pribadi pengguna?",
+    "keywords": ["simpan data pribadi", "privasi pengguna"],
+    "answer": "Tidak. Aplikasi hanya menyimpan kode wilayah terakhir dan riwayat FAQ sementara pada perangkat pengguna."
+  },
+  {
+    "id": "source-06",
+    "category": "sumber data",
+    "question": "Apakah aplikasi membutuhkan API key?",
+    "keywords": ["butuh api key", "kunci api"],
+    "answer": "Tidak. Endpoint terbuka BMKG yang digunakan tidak memerlukan API key."
+  },
+  {
+    "id": "source-07",
+    "category": "sumber data",
+    "question": "Apakah aplikasi berbayar?",
+    "keywords": ["aplikasi berbayar", "biaya aplikasi"],
+    "answer": "Prototype ini tidak memiliki fitur pembayaran atau langganan."
+  },
+  {
+    "id": "source-08",
+    "category": "sumber data",
+    "question": "Apakah data ditampilkan secara real-time?",
+    "keywords": ["data real time", "langsung waktu nyata"],
+    "answer": "Data mengikuti pembaruan terbaru BMKG. Prakiraan bukan pengukuran langsung real-time dan request dapat tersimpan sementara selama 30 menit."
+  },
+  {
+    "id": "source-09",
+    "category": "sumber data",
+    "question": "Apa perbedaan real-time dan prakiraan?",
+    "keywords": ["beda real time prakiraan", "waktu nyata vs prediksi"],
+    "answer": "Real-time menggambarkan observasi saat ini, sedangkan prakiraan memperkirakan kondisi pada waktu mendatang berdasarkan analisis."
+  },
+  {
+    "id": "source-10",
+    "category": "sumber data",
+    "question": "Bagaimana melaporkan data yang tidak sesuai?",
+    "keywords": ["lapor data salah", "data tidak sesuai"],
+    "answer": "Periksa wilayah dan waktu pembaruan. Untuk data sumber, gunakan kanal kontak resmi BMKG; untuk masalah tampilan, laporkan kepada pengelola prototype."
+  },
+
+  {
+    "id": "issue-01",
+    "category": "kendala aplikasi",
+    "question": "Mengapa data gagal dimuat?",
+    "keywords": ["data gagal dimuat", "gagal mengambil data"],
+    "answer": "Koneksi, layanan sumber, atau batas permintaan sementara dapat bermasalah. Tekan Coba Lagi setelah beberapa saat."
+  },
+  {
+    "id": "issue-02",
+    "category": "kendala aplikasi",
+    "question": "Mengapa muncul pesan koneksi bermasalah?",
+    "keywords": ["koneksi bermasalah", "gangguan internet"],
+    "answer": "Perangkat mungkin offline atau sumber data belum dapat dihubungi. Periksa koneksi lalu coba kembali."
+  },
+  {
+    "id": "issue-03",
+    "category": "kendala aplikasi",
+    "question": "Mengapa data kosong?",
+    "keywords": ["data kosong", "tidak ada isi"],
+    "answer": "Respons sumber mungkin belum berisi data valid untuk kategori atau wilayah tersebut. Aplikasi tidak menggantinya dengan data palsu."
+  },
+  {
+    "id": "issue-04",
+    "category": "kendala aplikasi",
+    "question": "Mengapa pencarian tidak bekerja?",
+    "keywords": ["pencarian tidak bekerja", "search rusak"],
+    "answer": "Pastikan kata kunci adalah wilayah Sumatera Utara. Hapus spasi berlebih dan coba nama kecamatan atau kabupaten."
+  },
+  {
+    "id": "issue-05",
+    "category": "kendala aplikasi",
+    "question": "Mengapa peta tidak tampil?",
+    "keywords": ["peta tidak tampil", "peta gagal dimuat"],
+    "answer": "Peta memerlukan internet untuk tile dan koordinat valid untuk marker. Periksa koneksi lalu muat ulang."
+  },
+  {
+    "id": "issue-06",
+    "category": "kendala aplikasi",
+    "question": "Mengapa grafik tidak muncul?",
+    "keywords": ["grafik tidak muncul", "chart kosong"],
+    "answer": "Grafik hanya tampil jika respons BMKG memiliki nilai numerik yang valid. Data kosong tidak dibuat-buat."
+  },
+  {
+    "id": "issue-07",
+    "category": "kendala aplikasi",
+    "question": "Mengapa waktu data terlihat lama?",
+    "keywords": ["waktu data lama", "data belum baru"],
+    "answer": "BMKG memiliki jadwal pembaruan dan aplikasi memakai cache 30 menit. Tekan Perbarui data jika jeda tombol telah selesai."
+  },
+  {
+    "id": "issue-08",
+    "category": "kendala aplikasi",
+    "question": "Bagaimana mencoba memuat ulang data?",
+    "keywords": ["coba muat ulang", "retry data"],
+    "answer": "Tekan Coba Lagi pada modul yang gagal atau tombol Perbarui data pada header."
+  },
+  {
+    "id": "issue-09",
+    "category": "kendala aplikasi",
+    "question": "Apakah aplikasi dapat digunakan tanpa internet?",
+    "keywords": ["gunakan tanpa internet", "mode offline"],
+    "answer": "Tampilan dapat terbuka, tetapi pengambilan data terbaru dan peta dasar memerlukan internet. Cache browser mungkin masih menampilkan data sebelumnya."
+  },
+  {
+    "id": "issue-10",
+    "category": "kendala aplikasi",
+    "question": "Mengapa data berbeda dengan aplikasi lain?",
+    "keywords": ["data berbeda aplikasi lain", "hasil tidak sama"],
+    "answer": "Perbedaan dapat terjadi karena waktu pembaruan, lokasi, sumber, atau jenis informasi. Periksa wilayah dan waktu pembaruan."
+  },
+
+  {
+    "id": "dynamic-location",
+    "category": "dashboard",
+    "question": "Wilayah apa yang sedang aktif?",
+    "keywords": ["wilayah aktif", "lokasi sekarang"],
+    "action": "GET_ACTIVE_LOCATION"
+  },
+  {
+    "id": "dynamic-weather",
+    "category": "cuaca",
+    "question": "Bagaimana cuaca wilayah ini?",
+    "keywords": ["cuaca wilayah ini", "cuaca sekarang", "kondisi cuaca aktif"],
+    "action": "GET_CURRENT_WEATHER"
+  },
+  {
+    "id": "dynamic-temperature",
+    "category": "cuaca",
+    "question": "Berapa suhu saat ini?",
+    "keywords": ["berapa suhu", "suhu sekarang", "temperatur wilayah ini"],
+    "action": "GET_CURRENT_TEMPERATURE"
+  },
+  {
+    "id": "dynamic-humidity",
+    "category": "cuaca",
+    "question": "Berapa kelembapan saat ini?",
+    "keywords": ["berapa kelembapan", "kelembapan sekarang"],
+    "action": "GET_CURRENT_HUMIDITY"
+  },
+  {
+    "id": "dynamic-wind",
+    "category": "cuaca",
+    "question": "Bagaimana angin saat ini?",
+    "keywords": ["angin saat ini", "kecepatan angin sekarang"],
+    "action": "GET_CURRENT_WIND"
+  },
+  {
+    "id": "dynamic-next",
+    "category": "cuaca",
+    "question": "Kapan prakiraan selanjutnya?",
+    "keywords": ["prakiraan selanjutnya", "cuaca berikutnya"],
+    "action": "GET_NEXT_FORECAST"
+  },
+  {
+    "id": "dynamic-quake",
+    "category": "gempa",
+    "question": "Ada gempa terbaru?",
+    "keywords": ["gempa terbaru", "kejadian gempa terakhir"],
+    "action": "GET_LATEST_EARTHQUAKE"
+  },
+  {
+    "id": "dynamic-mag",
+    "category": "gempa",
+    "question": "Berapa magnitudo gempa terbaru?",
+    "keywords": ["magnitudo gempa terbaru", "besar gempa terakhir"],
+    "action": "GET_LATEST_EARTHQUAKE_MAGNITUDE"
+  },
+  {
+    "id": "dynamic-tsunami",
+    "category": "gempa",
+    "question": "Apakah gempa terbaru berpotensi tsunami?",
+    "keywords": ["tsunami gempa terbaru", "status tsunami terakhir"],
+    "action": "GET_LATEST_EARTHQUAKE_TSUNAMI_STATUS"
+  },
+  {
+    "id": "dynamic-warning",
+    "category": "peringatan dini",
+    "question": "Apa status peringatan dini?",
+    "keywords": [
+      "status peringatan dini",
+      "ada peringatan aktif",
+      "warning sumatera utara"
+    ],
+    "action": "GET_WARNING_STATUS"
+  },
+  {
+    "id": "dynamic-updated",
+    "category": "dashboard",
+    "question": "Kapan data terakhir diperbarui?",
+    "keywords": ["terakhir diperbarui", "waktu update terakhir"],
+    "action": "GET_LAST_UPDATED"
+  },
+  {
+    "id": "dynamic-map-help",
+    "category": "WebGIS",
+    "question": "Buka bantuan peta",
+    "keywords": ["bantuan peta", "panduan webgis"],
+    "action": "OPEN_MAP_HELP"
+  },
+  {
+    "id": "dynamic-weather-detail",
+    "category": "cuaca",
+    "question": "Buka detail cuaca",
+    "keywords": ["detail cuaca", "lihat prakiraan lengkap"],
+    "action": "OPEN_WEATHER_DETAILS"
+  },
+  {
+    "id": "dynamic-quake-detail",
+    "category": "gempa",
+    "question": "Buka detail gempa",
+    "keywords": ["detail gempa", "lihat daftar gempa"],
+    "action": "OPEN_EARTHQUAKE_DETAILS"
+  }
+]
